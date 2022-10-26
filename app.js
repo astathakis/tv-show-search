@@ -38,6 +38,7 @@ form.addEventListener('submit', async function (e) {
   makeImage(res.data);
   form.elements.query.value = '';
   //   clearImage();
+  //update
 });
 
 const makeImage = (shows) => {
