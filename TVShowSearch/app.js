@@ -23,10 +23,6 @@ form.addEventListener('submit', async function (e) {
   e.preventDefault();
   clearImage();
   console.log('submitted');
-  //here
-  const images = document.getElementsByTagName('IMG');
-  console.log(images);
-  //   document.body.remove(images);
 
   console.dir(form);
   console.log(form.elements.query.value);
@@ -37,8 +33,6 @@ form.addEventListener('submit', async function (e) {
   //   console.log(res.data[0].show.image);
   makeImage(res.data);
   form.elements.query.value = '';
-  //   clearImage();
-  //update
 });
 
 const makeImage = (shows) => {
@@ -51,16 +45,10 @@ const makeImage = (shows) => {
   }
 };
 
-// const clearImages = (shows) => {
-//   document.body.remove(shows);
-// };
-
 const clearImage = () => {
   const images = document.querySelectorAll('img');
   console.log(images);
   for (let i = 0; i < images.length; i++) {
-    // image.remove();
-    // document.body.remove(image);
     img = images[i];
     console.log(img.parentNode);
     img.parentNode.removeChild(img);
